@@ -1,0 +1,161 @@
+@import "normalize.scss";
+@import "layout.scss";
+body{
+background: #c8a36c url(../img/bg.jpg)  no-repeat 50%/cover;
+background-attachment: fixed;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-container {
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ba-card {
+  position: relative;
+  width: 165px;
+  height: 235px;
+  margin: 15px;
+transform: perspective(2000px)
+             rotateY(0deg);
+  img{
+	  height:auto;
+	  
+  }
+}
+
+.ba-card--red {
+  color: red;
+}
+
+.ba-card__face, .ba-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s ease;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ba-card__face {
+  background-color: #fff;
+ padding: 25px 30px;
+  transform: rotateY(180deg);
+ 
+}
+
+.ba-card__back {
+  background: #cda871;
+  img{
+	  border-radius:15px;
+	   height:100%;
+	  width:100%;
+  }
+
+}
+
+.ba-card:hover .ba-card__face {
+  transform: rotateY(0);
+}
+
+.ba-card:hover .ba-card__back {
+  transform: rotateY(-180deg);
+}
+
+.ba-card__top, .ba-card__bottom {
+  position: absolute;
+  text-align: center;
+}
+
+.ba-card__top {
+  top: 15px;
+  left: 10px;
+}
+
+.ba-card__bottom {
+  transform: rotate(180deg);
+	right: 10px;
+  bottom: 15px;
+}
+
+.ba-card__body {
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	margin-left: 7px;
+}
+
+.ba-card__body__img {
+  margin-left: 0;
+}
+
+.ba-card__suits {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ba-card__suits--circum {
+  justify-content: space-around;
+}
+
+.ba-card__suits--center {
+  justify-content: center;
+}
